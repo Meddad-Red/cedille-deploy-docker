@@ -15,7 +15,7 @@ spec:
         app: httpbin-sh4ytan
     spec:
       containers:
-      - name: httpbin-sh4ytan
-        image: kennethreitz/httpbin:latest
-        ports:
-        - containerPort: 80
+        - name: httpbin-sh4ytan
+          image: ghcr.io/psf/httpbin:0.10.2
+          ports:
+            - containerPort: 8080
