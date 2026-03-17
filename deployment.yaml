@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpbin-sh4ytan
+  labels:
+    app: httpbin-sh4ytan
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: httpbin-sh4ytan
+  template:
+    metadata:
+      labels:
+        app: httpbin-sh4ytan
+    spec:
+      containers:
+      - name: httpbin-sh4ytan
+        image: kennethreitz/httpbin:latest
+        ports:
+        - containerPort: 80
